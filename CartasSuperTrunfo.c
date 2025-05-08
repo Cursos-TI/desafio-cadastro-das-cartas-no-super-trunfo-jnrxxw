@@ -6,7 +6,7 @@
 
 int main() {
     
-    // informações da carta 1
+    // carta 1
     
     char estado[3];
     char codigo [4] ;
@@ -16,7 +16,7 @@ int main() {
     float pib ;
     int pontos ;
 
-    // informações da carta 2 
+    // carta 2 
 
     char estado2[3];
     char codigo2 [4] ;
@@ -32,7 +32,7 @@ int main() {
 
 
 
-    // entrada carta 1
+    // informações da carta 1
 
 
     printf("\nDigite os Dados da Carta 1\n"); 
@@ -58,7 +58,7 @@ int main() {
     scanf ("%f" , &area ) ;
 
 
-    printf ("digite o PIB em bilhões de reais:");
+    printf ("digite o PIB em bilhões de reais:") ;
     scanf ("%f" , &pib);
 
 
@@ -67,7 +67,7 @@ int main() {
 
 
 
-    // entrada carta 2
+    // informações da carta 2 
 
     
 
@@ -87,7 +87,7 @@ int main() {
 
     
     printf ("digite o numero da População: ") ;
-    scanf ("%d" , &populacao2);
+    scanf ("%d" , &populacao2) ;
 
 
     printf ("digite a Área da cidade em km²: ") ;
@@ -101,6 +101,21 @@ int main() {
     printf ("digite o Número de Pontos Turísticos: ") ;
     scanf ("%d" , &pontos2 ) ;
 
+
+    // calculo do PIB per Capita e da  Densidade Populacional Carta 1
+
+    float densidade = (float)populacao / area ;
+    float percapita =  (float) (pib * 1000000000) / populacao ;
+
+
+    // calculo do PIB per Capita e da  Densidade Populacional Carta 2
+
+    float densidade2 = (float)populacao2 / area2 ;
+    float percapita2 =  (float) (pib2 * 1000000000) / populacao2 ;
+
+    
+    // adicionei "(pib * 1000000000)" pro calculo da "per Capita" fica igual no exemplo cortando os 0
+    
 
 
 
@@ -121,11 +136,15 @@ int main() {
 
     printf ("População : %d\n" , populacao) ;
 
-    printf ("Área : %.2f km²\n" , area ) ;
+    printf ("Área : %.2f km²\n" , area  ) ;
 
     printf ("PIB : %.2f bilhões de reais\n" , pib ) ;
 
     printf ("Número de Pontos Turísticos : %d\n" , pontos ) ;
+
+    printf ("Densidade Populacional : %.2F hab/km²\n" , densidade );
+
+    printf ("PIB per Capita : %.2f reais\n" , percapita );
 
 
     // Dados da carta 2
@@ -141,14 +160,15 @@ int main() {
 
     printf ("População : %d\n" , populacao2) ;
 
-    printf ("Área : %.2f km²\n" , area2 ) ;
+    printf ("Área : %.2f km²\n" , area2  ) ;
 
-    printf ("PIB : %.2f bilhões de reais\n" , pib2 ) ;
+    printf ("PIB : %.2f bilhões de reais\n" , pib2  ) ;
 
     printf ("Número de Pontos Turísticos : %d\n" , pontos2 ) ;
 
+    printf ("Densidade Populacional : %.2F hab/km²\n" , densidade2 );
 
-
+    printf ("PIB per Capita : %.2f reais\n" , percapita2 );
 
 
 
